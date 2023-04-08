@@ -145,6 +145,7 @@ from yapsy import PLUGIN_NAME_FORBIDEN_STRING
 # here before 1.10)
 from yapsy.PluginInfo import PluginInfo
 import inspect
+from typing import List
 
 
 class PluginManager(object):
@@ -397,7 +398,7 @@ class PluginManager(object):
 		"""
 		return self.category_mapping[category_name][:]
 
-	def getAllPlugins(self):
+	def getAllPlugins(self) -> List[PluginInfo]:
 		"""
 		Return the list of all plugins (belonging to all categories).
 		"""
